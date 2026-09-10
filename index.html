@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MyTube — Video Downloader</title>
+
+  <meta
+    name="description"
+    content="MyTube is a fast and clean video management and authorized download tool."
+  >
+
+  <meta name="theme-color" content="#ff0033">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="nav">
+
+      <a href="#" class="brand">
+        <span class="brand-icon">M</span>
+        <span>My<span>Tube</span></span>
+      </a>
+
+      <div class="nav-right">
+        <button
+          id="themeToggle"
+          class="icon-button"
+          type="button"
+          aria-label="Toggle theme"
+        >
+          ◐
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-pill">
+        <span class="status-dot"></span>
+        Fast • Simple • Secure
+      </div>
+
+      <h1>
+        Your videos.
+        <br>
+        <span>One simple place.</span>
+      </h1>
+
+      <p class="hero-text">
+        Paste a video URL, analyze it instantly,
+        and continue with your authorized video file.
+      </p>
+
+
+      <div class="download-box">
+
+        <div class="input-wrapper">
+
+          <span class="input-icon">↗</span>
+
+          <input
+            id="urlInput"
+            type="url"
+            placeholder="Paste YouTube video URL..."
+            autocomplete="off"
+            spellcheck="false"
+          >
+
+          <button
+            id="clearButton"
+            class="clear-button"
+            type="button"
+            aria-label="Clear URL"
+          >
+            ×
+          </button>
+
+        </div>
+
+        <button
+          id="analyzeButton"
+          class="analyze-button"
+          type="button"
+        >
+          Analyze
+          <span>→</span>
+        </button>
+
+      </div>
+
+
+      <div
+        id="message"
+        class="message"
+        aria-live="polite"
+      ></div>
+
+
+      <div
+        id="resultCard"
+        class="result-card"
+      >
+
+        <div class="result-top">
+
+          <div class="thumbnail-box">
+            <img
+              id="thumbnail"
+              src=""
+              alt="Video thumbnail"
+            >
+            <div class="play-badge">▶</div>
+          </div>
+
+          <div class="video-info">
+
+            <div class="verified">
+              <span>✓</span>
+              URL recognized
+            </div>
+
+            <h2 id="videoTitle">
+              YouTube Video
+            </h2>
+
+            <p id="videoId"></p>
+
+          </div>
+
+        </div>
+
+
+        <div class="download-options">
+
+          <div class="option-header">
+            <div>
+              <strong>Download options</strong>
+              <small>Select your preferred format</small>
+            </div>
+          </div>
+
+
+          <div class="format-grid">
+
+            <button
+              class="format-option active"
+              data-format="720"
+              type="button"
+            >
+              <strong>720p</strong>
+              <span>MP4 Video</span>
+            </button>
+
+            <button
+              class="format-option"
+              data-format="1080"
+              type="button"
+            >
+              <strong>1080p</strong>
+              <span>MP4 Video</span>
+            </button>
+
+            <button
+              class="format-option"
+              data-format="480"
+              type="button"
+            >
+              <strong>480p</strong>
+              <span>MP4 Video</span>
+            </button>
+
+            <button
+              class="format-option"
+              data-format="audio"
+              type="button"
+            >
+              <strong>Audio</strong>
+              <span>Authorized file</span>
+            </button>
+
+          </div>
+
+
+          <button
+            id="downloadButton"
+            class="download-button"
+            type="button"
+            disabled
+          >
+            <span>↓</span>
+            Download Authorized File
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="features">
+
+      <div class="section-title">
+        <span>WHY MYTUBE</span>
+        <h2>Everything stays simple.</h2>
+      </div>
+
+
+      <div class="feature-grid">
+
+        <article class="feature">
+
+          <div class="feature-icon">01</div>
+
+          <h3>Paste</h3>
+
+          <p>
+            Add the URL of your own video or
+            another video you are authorized to use.
+          </p>
+
+        </article>
+
+
+        <article class="feature">
+
+          <div class="feature-icon">02</div>
+
+          <h3>Analyze</h3>
+
+          <p>
+            MyTube validates the URL and prepares
+            the video information.
+          </p>
+
+        </article>
+
+
+        <article class="feature">
+
+          <div class="feature-icon">03</div>
+
+          <h3>Download</h3>
+
+          <p>
+            Choose an available format and download
+            the authorized video file.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="notice">
+
+      <div class="notice-icon">i</div>
+
+      <div>
+        <strong>Important</strong>
+
+        <p>
+          MyTube is designed for videos and files that
+          you own or have permission to download. It does
+          not bypass platform restrictions or protected
+          media delivery.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        MyTube
+      </div>
+
+      <p>
+        Simple video tools for authorized content.
+      </p>
+
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+
+      <span>
+        © 2026 MyTube
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
