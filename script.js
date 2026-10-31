@@ -1,5 +1,6 @@
-const API_BASE =
-  "https://my-youtube-vedio-download.vercel.app/";
+// Backend is expected to expose POST /api/analyze and POST /api/download
+// on this Vercel domain. Keep the base URL without a trailing slash.
+const API_BASE = "https://my-youtube-vedio-download.vercel.app";
 
 
 /* =========================
